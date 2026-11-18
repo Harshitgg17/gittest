@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit Gupta | Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: 'rgba(15, 23, 42, 0.75)',
+                        neonCyan: '#06b6d4',
+                        neonPurple: '#a855f7',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased relative selection:bg-cyan-500 selection:text-white">
+
+    <!-- Glowing Cursor -->
+    <div id="cursor-glow"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="mathCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <a href="#" class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                HG<span class="text-cyan-400">.</span>
+            </a>
+
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-cyan-400">About</a>
+                <a href="#education" class="hover:text-cyan-400">Education</a>
+                <a href="#internships" class="hover:text-cyan-400">Internships</a>
+                <a href="#strengths" class="hover:text-cyan-400">Strengths</a>
+                <a href="#projects" class="hover:text-cyan-400">Projects</a>
+                <a href="#contact" class="hover:text-cyan-400">Contact</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/Harshitgg17" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="min-h-screen flex items-center justify-center relative pt-20 px-6">
+        <div class="max-w-4xl mx-auto text-center z-10 reveal active">
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-cyan-400 text-xs sm:text-sm mb-6">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                B.Tech CSE Student @ South Asian University, New Delhi
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
+                Hi, I'm
+                <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent text-glow">
+                    Harshit Gupta
+                </span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
+                A passionate computer science innovator blending rigorous mathematical problem-solving with cutting-edge software development.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold">
+                    Explore Projects
+                </a>
+
+                <a href="#contact" class="px-8 py-4 rounded-xl glass-card font-semibold">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Academic Journey</h2>
+                <p class="text-slate-400">My educational milestones shaping my technical foundation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="tilt-card glass-card p-8 rounded-2xl reveal">
+                    <div class="text-cyan-400 font-mono text-sm mb-2">2026 – 2030</div>
+                    <h3 class="text-xl font-bold mb-2">B.Tech in Computer Science & Engineering</h3>
+                    <p class="text-slate-300 mb-4">South Asian University, New Delhi</p>
+                    <p class="text-slate-400 text-sm">Focusing on core algorithms, software architecture, and modern problem-solving methodologies.</p>
+                </div>
+
+                <div class="tilt-card glass-card p-8 rounded-2xl reveal">
+                    <div class="text-purple-400 font-mono text-sm mb-2">Passed in 2025</div>
+                    <h3 class="text-xl font-bold mb-2">High School (12th Grade)</h3>
+                    <p class="text-slate-300 mb-4">Percentage: 79%</p>
+                    <p class="text-slate-400 text-sm">Built strong analytical fundamentals in mathematics, physics, and computer science.</p>
+                </div>
+
+                <div class="tilt-card glass-card p-8 rounded-2xl reveal">
+                    <div class="text-indigo-400 font-mono text-sm mb-2">Passed in 2023</div>
+                    <h3 class="text-xl font-bold mb-2">Secondary School (10th Grade)</h3>
+                    <p class="text-slate-300 mb-4">Percentage: 90%</p>
+                    <p class="text-slate-400 text-sm">Achieved academic excellence with distinction in core science and math modules.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internships" class="py-24 px-6 relative bg-slate-900/40">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Internship Experience</h2>
+                <p class="text-slate-400">Gaining hands-on industry exposure and building real-world solutions.</p>
+            </div>
+
+            <div class="tilt-card glass-card p-8 rounded-3xl reveal">
+                <span class="text-cyan-400 text-xs font-mono">Software Engineering Intern</span>
+                <h3 class="text-2xl font-bold mt-3 mb-4">Tech / Startup Company Name</h3>
+                <p class="text-cyan-400 font-mono text-sm mb-4">2026 – Present</p>
+
+                <p class="text-slate-300 mb-6">
+                    Working on full-stack web applications, optimizing backend architectures, and collaborating with senior engineers to implement scalable features and responsive UI modules.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs">JavaScript / TypeScript</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs">Web Architecture</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs">API Integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section id="strengths" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Core Strengths</h2>
+                <p class="text-slate-400">What drives my passion and defines my professional work ethic.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div class="tilt-card glass-card p-6 rounded-2xl reveal">
+                    <i class="fas fa-fire text-cyan-400 text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Passionate</h3>
+                    <p class="text-slate-400 text-sm">Deeply enthusiastic about coding, math-driven algorithms, and creating seamless digital tools.</p>
+                </div>
+
+                <div class="tilt-card glass-card p-6 rounded-2xl reveal">
+                    <i class="fas fa-brain text-purple-400 text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Analytical Thinker</h3>
+                    <p class="text-slate-400 text-sm">Strong mathematical aptitude allowing me to break down complex logical challenges efficiently.</p>
+                </div>
+
+                <div class="tilt-card glass-card p-6 rounded-2xl reveal">
+                    <i class="fas fa-lightbulb text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Innovative Creator</h3>
+                    <p class="text-slate-400 text-sm">Constantly brainstorming new ideas and translating concepts into working web applications like Doubthut.</p>
+                </div>
+
+                <div class="tilt-card glass-card p-6 rounded-2xl reveal">
+                    <i class="fas fa-bolt text-pink-400 text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Quick Learner</h3>
+                    <p class="text-slate-400 text-sm">Eager to adopt emerging technologies, frameworks, and tools rapidly to stay ahead.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 relative bg-slate-900/40">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Featured Project</h2>
+                <p class="text-slate-400">Showcasing my technical execution and problem-solving capability.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto reveal">
+                <div class="tilt-card glass-card p-8 sm:p-10 rounded-3xl border border-cyan-500/30">
+
+                    <div class="flex justify-between mb-6">
+                        <span class="text-cyan-400 text-xs font-mono">Web Application</span>
+
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Harshitgg17" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://doubthut.infinityfree.io/?i=1" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3 class="text-3xl font-bold mb-4">Doubthut</h3>
+
+                    <p class="text-slate-300 mb-6">
+                        An interactive platform designed to solve queries seamlessly, foster peer-to-peer knowledge sharing, and streamline academic collaboration with responsive layouts and robust functionality.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs">HTML5 / CSS3</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs">JavaScript</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs">Web Architecture</span>
+                    </div>
+
+                    <a href="https://doubthut.infinityfree.io/?i=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/20 text-cyan-400 font-semibold">
+                        Visit Doubthut Live
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center reveal">
+
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Let's Connect</h2>
+
+            <p class="text-slate-400 mb-10">
+                Have an exciting project idea, collaboration, or opportunity? Feel free to reach out!
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <a href="https://github.com/Harshitgg17" target="_blank" rel="noopener noreferrer" class="glass-card px-6 py-4 rounded-2xl flex items-center gap-3">
+                    <i class="fab fa-github text-xl"></i>
+                    <span>GitHub / Harshitgg17</span>
+                </a>
+
+                <a href="mailto:contact@harshitgupta.dev" class="glass-card px-6 py-4 rounded-2xl flex items-center gap-3">
+                    <i class="fas fa-envelope text-xl"></i>
+                    <span>Email Me</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10 text-center text-slate-500 text-sm">
+        <p>© 2026 Harshit Gupta. Crafted with advanced animations & mathematical elegance.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
